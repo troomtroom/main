@@ -14,12 +14,16 @@
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#setting-monthly-budget-code-bset-code">3.2. Setting monthly budget: <code>bset</code></a></li>
-<li><a href="#excluding-transaction-from-budget-code-bexclude-code">3.3. Excluding transaction from budget: <code>bexclude</code></a></li>
-<li><a href="#including-transaction-in-budget-code-binclude-code">3.4. Including transaction in budget: <code>binclude</code></a></li>
-<li><a href="#viewing-budgeting-information-code-binfo-code">3.5. Viewing budgeting information: <code>binfo</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.6. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.7. Saving the data</a></li>
+<li><a href="#creating-repeating-transaction-code-repadd-code">3.2. Creating repeating transaction: <code>repadd</code></a></li>
+<li><a href="#editing-repeating-transaction-code-repedit-code">3.3. Editing repeating transaction: <code>repedit</code></a></li>
+<li><a href="#deleting-repeating-transaction-code-repdelete-code">3.4. Deleting repeating transaction: <code>repdelete</code></a></li>
+<li><a href="#finding-repeating-transaction-code-repfind-code">3.5. Finding repeating transaction: <code>repfind</code></a></li>
+<li><a href="#setting-monthly-budget-code-bset-code">3.6. Setting monthly budget: <code>bset</code></a></li>
+<li><a href="#excluding-transaction-from-budget-code-bexclude-code">3.7. Excluding transaction from budget: <code>bexclude</code></a></li>
+<li><a href="#including-transaction-in-budget-code-binclude-code">3.8. Including transaction in budget: <code>binclude</code></a></li>
+<li><a href="#viewing-budgeting-information-code-binfo-code">3.9. Viewing budgeting information: <code>binfo</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.10. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.11. Saving the data</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -120,7 +124,79 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="setting-monthly-budget-code-bset-code"><a class="link" href="#setting-monthly-budget-code-bset-code">3.2. Setting monthly budget: <code>bset</code></a></h3>
+<h3 id="creating-repeating-transaction-code-repadd-code"><a class="link" href="#creating-repeating-transaction-code-repadd-code">3.2. Creating repeating transaction: <code>repadd</code></a></h3>
+<div class="paragraph">
+<p>Creates monthly repeating transaction.<br>
+Format: <code>repadd m/DESCRIPTION a/AMOUNT [p/DAY]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>repadd m/Travelling a/32.70 p/7 p/14 p/21 p/28</code><br>
+Creates a repeating transaction titled "Travelling" for a $32.70 deduction every 7th, 14th, 21st and 28th of the month.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-repeating-transaction-code-repedit-code"><a class="link" href="#editing-repeating-transaction-code-repedit-code">3.3. Editing repeating transaction: <code>repedit</code></a></h3>
+<div class="paragraph">
+<p>Edits repeating transaction.<br>
+Format: <code>repadd i/ID [m/DESCRIPTION] [a/AMOUNT] [p/DAY]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>repedit i/12 a/62.45 p/11 p/12</code><br>
+Edits the 12th repeating transaction for a $62.45 deduction every 11th and 12th of the month.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-repeating-transaction-code-repdelete-code"><a class="link" href="#deleting-repeating-transaction-code-repdelete-code">3.4. Deleting repeating transaction: <code>repdelete</code></a></h3>
+<div class="paragraph">
+<p>Deletes repeating transaction. Optionally deletes transactions previously produced from the repeating transaction.<br>
+Format: <code>repdelete i/ID [d/DELETEALL]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>repdelete i/12 p/TRUE</code><br>
+Deletes the 12th repeating transaction.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-repeating-transaction-code-repfind-code"><a class="link" href="#finding-repeating-transaction-code-repfind-code">3.5. Finding repeating transaction: <code>repfind</code></a></h3>
+<div class="paragraph">
+<p>Filters repeating transactions by keyword and repeating days.<br>
+Format: <code>repfind [s/KEYWORD]&#8230;&#8203; [p/DAY]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>repfind s/Income p/7 p/13</code><br>
+Finds all repeating transactions with "Income" contained in their descriptions, and that occur on the 7th and 13th of the month.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="setting-monthly-budget-code-bset-code"><a class="link" href="#setting-monthly-budget-code-bset-code">3.6. Setting monthly budget: <code>bset</code></a></h3>
 <div class="paragraph">
 <p>Sets monthly expenditure budget.<br>
 Format: <code>bset a/AMOUNT</code></p>
@@ -138,7 +214,7 @@ Sets monthly expenditure budget to $1000.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="excluding-transaction-from-budget-code-bexclude-code"><a class="link" href="#excluding-transaction-from-budget-code-bexclude-code">3.3. Excluding transaction from budget: <code>bexclude</code></a></h3>
+<h3 id="excluding-transaction-from-budget-code-bexclude-code"><a class="link" href="#excluding-transaction-from-budget-code-bexclude-code">3.7. Excluding transaction from budget: <code>bexclude</code></a></h3>
 <div class="paragraph">
 <p>Excludes transaction from computation of budget.<br>
 Format: <code>bexclude i/TRANSACTION_ID</code></p>
@@ -171,7 +247,7 @@ Excludes the 2nd transaction in the list from computation of budget.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="including-transaction-in-budget-code-binclude-code"><a class="link" href="#including-transaction-in-budget-code-binclude-code">3.4. Including transaction in budget: <code>binclude</code></a></h3>
+<h3 id="including-transaction-in-budget-code-binclude-code"><a class="link" href="#including-transaction-in-budget-code-binclude-code">3.8. Including transaction in budget: <code>binclude</code></a></h3>
 <div class="paragraph">
 <p>Includes transaction in computation of budget.<br>
 Format: <code>binclude i/TRANSACTION_ID</code></p>
@@ -204,7 +280,7 @@ Includes the 2nd transaction in the list from computation of budget.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="viewing-budgeting-information-code-binfo-code"><a class="link" href="#viewing-budgeting-information-code-binfo-code">3.5. Viewing budgeting information: <code>binfo</code></a></h3>
+<h3 id="viewing-budgeting-information-code-binfo-code"><a class="link" href="#viewing-budgeting-information-code-binfo-code">3.9. Viewing budgeting information: <code>binfo</code></a></h3>
 <div class="paragraph">
 <p>Displays budgeting information.<br>
 Format: <code>binfo [m/MONTH y/YEAR]</code></p>
@@ -226,14 +302,14 @@ Displays expenditure budget left and a list of all excluded transactions for Jul
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.6. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.10. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.7. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.11. Saving the data</a></h3>
 <div class="paragraph">
 <p>IchiFund data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
@@ -276,4 +352,4 @@ There is no need to save manually.</p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-09-30 12:29:42 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-09-30 17:24:30 UTC</div></div></div></body></html>
