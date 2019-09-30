@@ -13,17 +13,12 @@
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#creating-repeating-transaction-code-repadd-code">3.2. Creating repeating transaction: <code>repadd</code></a></li>
-<li><a href="#editing-repeating-transaction-code-repedit-code">3.3. Editing repeating transaction: <code>repedit</code></a></li>
-<li><a href="#deleting-repeating-transaction-code-repdelete-code">3.4. Deleting repeating transaction: <code>repdelete</code></a></li>
-<li><a href="#finding-repeating-transaction-code-repfind-code">3.5. Finding repeating transaction: <code>repfind</code></a></li>
-<li><a href="#setting-monthly-budget-code-bset-code">3.6. Setting monthly budget: <code>bset</code></a></li>
-<li><a href="#excluding-transaction-from-budget-code-bexclude-code">3.7. Excluding transaction from budget: <code>bexclude</code></a></li>
-<li><a href="#including-transaction-in-budget-code-binclude-code">3.8. Including transaction in budget: <code>binclude</code></a></li>
-<li><a href="#viewing-budgeting-information-code-binfo-code">3.9. Viewing budgeting information: <code>binfo</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.10. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.11. Saving the data</a></li>
+<li><a href="#ichifund-basics">3.1. IchiFund Basics</a></li>
+<li><a href="#transactions">3.2. Transactions</a></li>
+<li><a href="#repeating-transactions">3.3. Repeating Transactions</a></li>
+<li><a href="#loans">3.4. Loans</a></li>
+<li><a href="#budgets">3.5. Budgets</a></li>
+<li><a href="#analytics">3.6. Analytics</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -118,13 +113,36 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></h3>
+<h3 id="ichifund-basics"><a class="link" href="#ichifund-basics">3.1. IchiFund Basics</a></h3>
+<div class="sect3">
+<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1.1. Viewing help : <code>help</code></a></h4>
 <div class="paragraph">
 <p>Format: <code>help</code></p>
 </div>
 </div>
+<div class="sect3">
+<h4 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.1.2. Exiting the program : <code>exit</code></a></h4>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="saving-the-data"><a class="link" href="#saving-the-data">3.1.3. Saving the data</a></h4>
+<div class="paragraph">
+<p>IchiFund data are saved in the hard disk automatically after any command that changes the data.<br>
+There is no need to save manually.</p>
+</div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="creating-repeating-transaction-code-repadd-code"><a class="link" href="#creating-repeating-transaction-code-repadd-code">3.2. Creating repeating transaction: <code>repadd</code></a></h3>
+<h3 id="transactions"><a class="link" href="#transactions">3.2. Transactions</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="repeating-transactions"><a class="link" href="#repeating-transactions">3.3. Repeating Transactions</a></h3>
+<div class="sect3">
+<h4 id="creating-repeating-transaction-code-repadd-code"><a class="link" href="#creating-repeating-transaction-code-repadd-code">3.3.1. Creating repeating transaction: <code>repadd</code></a></h4>
 <div class="paragraph">
 <p>Creates monthly repeating transaction.<br>
 Format: <code>repadd m/DESCRIPTION a/AMOUNT [p/DAY]&#8230;&#8203;</code></p>
@@ -141,8 +159,8 @@ Creates a repeating transaction titled "Travelling" for a $32.70 deduction every
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="editing-repeating-transaction-code-repedit-code"><a class="link" href="#editing-repeating-transaction-code-repedit-code">3.3. Editing repeating transaction: <code>repedit</code></a></h3>
+<div class="sect3">
+<h4 id="editing-repeating-transaction-code-repedit-code"><a class="link" href="#editing-repeating-transaction-code-repedit-code">3.3.2. Editing repeating transaction: <code>repedit</code></a></h4>
 <div class="paragraph">
 <p>Edits repeating transaction.<br>
 Format: <code>repadd i/ID [m/DESCRIPTION] [a/AMOUNT] [p/DAY]&#8230;&#8203;</code></p>
@@ -159,8 +177,8 @@ Edits the 12th repeating transaction for a $62.45 deduction every 11th and 12th 
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="deleting-repeating-transaction-code-repdelete-code"><a class="link" href="#deleting-repeating-transaction-code-repdelete-code">3.4. Deleting repeating transaction: <code>repdelete</code></a></h3>
+<div class="sect3">
+<h4 id="deleting-repeating-transaction-code-repdelete-code"><a class="link" href="#deleting-repeating-transaction-code-repdelete-code">3.3.3. Deleting repeating transaction: <code>repdelete</code></a></h4>
 <div class="paragraph">
 <p>Deletes repeating transaction. Optionally deletes transactions previously produced from the repeating transaction.<br>
 Format: <code>repdelete i/ID [d/DELETEALL]</code></p>
@@ -177,8 +195,8 @@ Deletes the 12th repeating transaction.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="finding-repeating-transaction-code-repfind-code"><a class="link" href="#finding-repeating-transaction-code-repfind-code">3.5. Finding repeating transaction: <code>repfind</code></a></h3>
+<div class="sect3">
+<h4 id="finding-repeating-transaction-code-repfind-code"><a class="link" href="#finding-repeating-transaction-code-repfind-code">3.3.4. Finding repeating transaction: <code>repfind</code></a></h4>
 <div class="paragraph">
 <p>Filters repeating transactions by keyword and repeating days.<br>
 Format: <code>repfind [s/KEYWORD]&#8230;&#8203; [p/DAY]&#8230;&#8203;</code></p>
@@ -195,8 +213,15 @@ Finds all repeating transactions with "Income" contained in their descriptions, 
 </ul>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="setting-monthly-budget-code-bset-code"><a class="link" href="#setting-monthly-budget-code-bset-code">3.6. Setting monthly budget: <code>bset</code></a></h3>
+<h3 id="loans"><a class="link" href="#loans">3.4. Loans</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="budgets"><a class="link" href="#budgets">3.5. Budgets</a></h3>
+<div class="sect3">
+<h4 id="setting-monthly-budget-code-bset-code"><a class="link" href="#setting-monthly-budget-code-bset-code">3.5.1. Setting monthly budget: <code>bset</code></a></h4>
 <div class="paragraph">
 <p>Sets monthly expenditure budget.<br>
 Format: <code>bset a/AMOUNT</code></p>
@@ -213,8 +238,8 @@ Sets monthly expenditure budget to $1000.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="excluding-transaction-from-budget-code-bexclude-code"><a class="link" href="#excluding-transaction-from-budget-code-bexclude-code">3.7. Excluding transaction from budget: <code>bexclude</code></a></h3>
+<div class="sect3">
+<h4 id="excluding-transaction-from-budget-code-bexclude-code"><a class="link" href="#excluding-transaction-from-budget-code-bexclude-code">3.5.2. Excluding transaction from budget: <code>bexclude</code></a></h4>
 <div class="paragraph">
 <p>Excludes transaction from computation of budget.<br>
 Format: <code>bexclude i/TRANSACTION_ID</code></p>
@@ -246,8 +271,8 @@ Excludes the 2nd transaction in the list from computation of budget.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="including-transaction-in-budget-code-binclude-code"><a class="link" href="#including-transaction-in-budget-code-binclude-code">3.8. Including transaction in budget: <code>binclude</code></a></h3>
+<div class="sect3">
+<h4 id="including-transaction-in-budget-code-binclude-code"><a class="link" href="#including-transaction-in-budget-code-binclude-code">3.5.3. Including transaction in budget: <code>binclude</code></a></h4>
 <div class="paragraph">
 <p>Includes transaction in computation of budget.<br>
 Format: <code>binclude i/TRANSACTION_ID</code></p>
@@ -279,10 +304,10 @@ Includes the 2nd transaction in the list from computation of budget.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="viewing-budgeting-information-code-binfo-code"><a class="link" href="#viewing-budgeting-information-code-binfo-code">3.9. Viewing budgeting information: <code>binfo</code></a></h3>
+<div class="sect3">
+<h4 id="viewing-budget-information-code-binfo-code"><a class="link" href="#viewing-budget-information-code-binfo-code">3.5.4. Viewing budget information: <code>binfo</code></a></h4>
 <div class="paragraph">
-<p>Displays budgeting information.<br>
+<p>Displays budget information.<br>
 Format: <code>binfo [m/MONTH y/YEAR]</code></p>
 </div>
 <div class="paragraph">
@@ -301,18 +326,162 @@ Displays expenditure budget left and a list of all excluded transactions for Jul
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.10. Exiting the program : <code>exit</code></a></h3>
-<div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.11. Saving the data</a></h3>
+<h3 id="analytics"><a class="link" href="#analytics">3.6. Analytics</a></h3>
+<div class="sect3">
+<h4 id="viewing-expenditure-trend-code-aexpend-code"><a class="link" href="#viewing-expenditure-trend-code-aexpend-code">3.6.1. Viewing expenditure trend: <code>aexpend</code></a></h4>
 <div class="paragraph">
-<p>IchiFund data are saved in the hard disk automatically after any command that changes the data.<br>
-There is no need to save manually.</p>
+<p>Displays annual expenditure trend.<br>
+Format: <code>aexpend [y/YEAR]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>aexpend</code><br>
+Displays annual expenditure trend for current year.</p>
+</li>
+<li>
+<p><code>aexpend 2019</code><br>
+Displays annual expenditure trend for 2019.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-income-trend-code-aincome-code"><a class="link" href="#viewing-income-trend-code-aincome-code">3.6.2. Viewing income trend: <code>aincome</code></a></h4>
+<div class="paragraph">
+<p>Displays annual income trend.<br>
+Format: <code>aincome [y/YEAR]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>aincome</code><br>
+Displays annual income trend for current year.</p>
+</li>
+<li>
+<p><code>aincome 2019</code><br>
+Displays annual income trend for 2019.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-balance-trend-code-abalance-code"><a class="link" href="#viewing-balance-trend-code-abalance-code">3.6.3. Viewing balance trend: <code>abalance</code></a></h4>
+<div class="paragraph">
+<p>Displays annual balance (income - expenditure) trend.<br>
+Format: <code>abalance [y/YEAR]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>abalance</code><br>
+Displays annual balance trend for current year.</p>
+</li>
+<li>
+<p><code>abalance 2019</code><br>
+Displays annual balance trend for 2019.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-expenditure-breakdown-by-category-code-abreakdown-code"><a class="link" href="#viewing-expenditure-breakdown-by-category-code-abreakdown-code">3.6.4. Viewing expenditure breakdown by category: <code>abreakdown</code></a></h4>
+<div class="paragraph">
+<p>Displays breakdown of expenditure by category.<br>
+Format: <code>abreakdown [m/MONTH] [y/YEAR]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>abreakdown</code><br>
+Displays expenditure breakdown by category for current month.</p>
+</li>
+<li>
+<p><code>abreakdown m/7 y/2019</code><br>
+Displays expenditure breakdown by category for July 2019.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-expenditure-category-ranking-chart-code-acatrank-code"><a class="link" href="#viewing-expenditure-category-ranking-chart-code-acatrank-code">3.6.5. Viewing expenditure category ranking chart: <code>acatrank</code></a></h4>
+<div class="paragraph">
+<p>Displays expenditure category ranking chart.<br>
+Format: <code>acatrank [m/MONTH] [y/YEAR]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>acatrank</code><br>
+Displays expenditure category ranking chart for current month.</p>
+</li>
+<li>
+<p><code>acatrank m/7 y/2019</code><br>
+Displays expenditure category ranking chart for July 2019.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-expenditure-ranking-chart-by-month-code-amthrank-code"><a class="link" href="#viewing-expenditure-ranking-chart-by-month-code-amthrank-code">3.6.6. Viewing expenditure ranking chart by month: <code>amthrank</code></a></h4>
+<div class="paragraph">
+<p>Displays expenditure ranking chart by month.<br>
+Format: <code>amthrank [y/YEAR]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>amthrank</code><br>
+Displays all-time expenditure ranking chart by month.</p>
+</li>
+<li>
+<p><code>amthrank y/2019</code><br>
+Displays expenditure ranking chart by month for 2019.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-expenditure-ranking-chart-code-aexprank-code"><a class="link" href="#viewing-expenditure-ranking-chart-code-aexprank-code">3.6.7. Viewing expenditure ranking chart: <code>aexprank</code></a></h4>
+<div class="paragraph">
+<p>Displays expenditure ranking chart.<br>
+Format: <code>aexprank [m/MONTH] [y/YEAR]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>aexprank</code><br>
+Displays all-time expenditure ranking chart.</p>
+</li>
+<li>
+<p><code>aexprank m/7 y/2019</code><br>
+Displays expenditure ranking chart for July 2019.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -335,6 +504,9 @@ There is no need to save manually.</p>
 <p><strong>Help</strong> : <code>help</code></p>
 </li>
 <li>
+<p><strong>Exit</strong> : <code>exit</code></p>
+</li>
+<li>
 <p><strong>Budget Set</strong> : <code>bset a/AMOUNT</code></p>
 </li>
 <li>
@@ -347,9 +519,27 @@ There is no need to save manually.</p>
 <p><strong>Budget Info</strong> : <code>binfo [m/MONTH y/YEAR]</code></p>
 </li>
 <li>
-<p><strong>Exit</strong> : <code>exit</code></p>
+<p><strong>Expenditure Trend</strong> : <code>aexpend [y/YEAR]</code></p>
+</li>
+<li>
+<p><strong>Income Trend</strong> : <code>aincome [y/YEAR]</code></p>
+</li>
+<li>
+<p><strong>Balance Trend</strong> : <code>abalance [y/YEAR]</code></p>
+</li>
+<li>
+<p><strong>Categorical Breakdown</strong> : <code>abreakdown [m/MONTH] [y/YEAR]</code></p>
+</li>
+<li>
+<p><strong>Categorical Ranking Chart</strong> : <code>acatrank [m/MONTH] [y/YEAR]</code></p>
+</li>
+<li>
+<p><strong>Month-Based Ranking Chart</strong> : <code>amthrank [y/YEAR]</code></p>
+</li>
+<li>
+<p><strong>Ranking Chart</strong> : <code>aexprank [m/MONTH] [y/YEAR]</code></p>
 </li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-09-30 17:59:23 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-09-30 19:17:09 UTC</div></div></div></body></html>
