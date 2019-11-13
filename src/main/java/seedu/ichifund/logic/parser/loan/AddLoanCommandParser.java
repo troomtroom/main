@@ -87,8 +87,8 @@ public class AddLoanCommandParser implements Parser<AddLoanCommand> {
             startmonth = ParserUtil.parseMonth(argMultimap.getValue(PREFIX_START_MONTH).get());
             startyear = ParserUtil.parseYear(argMultimap.getValue(PREFIX_START_YEAR).get());
         } else {
-            startday = new Day("30");
-            startmonth = new Month("12");
+            startday = new Day("17");
+            startmonth = new Month("11");
             startyear = new Year("2019");
         }
 
@@ -99,9 +99,9 @@ public class AddLoanCommandParser implements Parser<AddLoanCommand> {
             endmonth = ParserUtil.parseMonth(argMultimap.getValue(PREFIX_END_MONTH).get());
             endyear = ParserUtil.parseYear(argMultimap.getValue(PREFIX_END_YEAR).get());
         } else {
-            endday = new Day("11");
-            endmonth = new Month("11");
-            endyear = new Year("2019");
+            endday = new Day("117");
+            endmonth = new Month("2");
+            endyear = new Year("2020");
         }
 
         /*if (argMultimap.getValue(PREFIX_NAME).isPresent()) {
